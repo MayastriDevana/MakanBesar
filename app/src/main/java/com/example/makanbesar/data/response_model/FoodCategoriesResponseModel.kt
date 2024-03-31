@@ -1,4 +1,4 @@
-package com.example.bcasyariah.com.example.makanbesar.data.model
+package com.example.bcasyariah.com.example.makanbesar.data.response_model
 
 import com.google.gson.annotations.SerializedName
 

@@ -3,7 +3,9 @@ package com.example.bcasyariah.com.example.makanbesar.presentation.main_screen.v
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.bcasyariah.com.example.makanbesar.presentation.home_screen.view.FavoriteMealsFragment
 import com.example.bcasyariah.com.example.makanbesar.presentation.home_screen.view.FoodCategoriesFragment
+import com.example.bcasyariah.com.example.makanbesar.presentation.home_screen.view.RecommendedFragment
 import com.example.makanbesar.R
 import com.example.makanbesar.databinding.ActivityFoodCategoriesBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -22,7 +24,7 @@ class FoodCategoriesActivity : AppCompatActivity() {
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.navigationFavorite -> {
-                    replaceFragment(FavoriteFragment())
+                    replaceFragment(FavoriteMealsFragment())
                     return@OnNavigationItemSelectedListener true
                 }
 

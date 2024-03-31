@@ -4,33 +4,33 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.bcasyariah.com.example.makanbesar.data.model.Categories
-import com.example.makanbesar.databinding.ItemMainBinding
+import com.example.bcasyariah.com.example.makanbesar.data.response_model.Categories
+import com.example.makanbesar.databinding.ItemFoodCategoriesBinding
 
 
 class FoodCategoriesAdapter (
     private val data:List<Categories>
-): RecyclerView.Adapter<FoodCategoriesAdapter.MainViewHolder> () {
+): RecyclerView.Adapter<FoodCategoriesAdapter.FoodCategoriesViewHolder> () {
 
 
-    inner class MainViewHolder(
-        val binding: ItemMainBinding
+    inner class FoodCategoriesViewHolder(
+        val binding: ItemFoodCategoriesBinding
     ): RecyclerView.ViewHolder(binding.root){
-        fun bind(mainModel: Categories){
+        fun bind(foodCategoriesModel: Categories){
             binding.root.context?.let {
                 Glide
                     .with(it)
-                    .load(mainModel.strCategoryThumb)
+                    .load(foodCategoriesModel.strCategoryThumb)
                     .centerCrop()
                     .into(binding.ivhome)
             };
-            binding.tvhome.text = mainModel.strCategory
+            binding.tvhome.text = foodCategoriesModel.strCategory
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
-        return MainViewHolder(
-            ItemMainBinding.inflate(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodCategoriesViewHolder {
+        return FoodCategoriesViewHolder(
+            ItemFoodCategoriesBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -40,7 +40,7 @@ class FoodCategoriesAdapter (
 
     override fun getItemCount(): Int = data.size
 
-    override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FoodCategoriesViewHolder, position: Int) {
         holder.bind(data[position])
 
     }

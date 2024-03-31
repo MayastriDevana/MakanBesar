@@ -2,10 +2,9 @@ package com.example.bcasyariah.com.example.makanbesar.presentation.home_screen.v
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.example.bcasyariah.com.example.makanbesar.base.BaseFragment
-import com.example.bcasyariah.com.example.makanbesar.data.model.Categories
+import com.example.bcasyariah.com.example.makanbesar.data.response_model.Categories
 import com.example.bcasyariah.com.example.makanbesar.presentation.main_screen.adapter.FoodCategoriesAdapter
 import com.example.makanbesar.databinding.FragmentFoodCategoriesBinding
 import com.example.makanbesar.presentation.main_screen.view_model.FoodCategoriesViewModel
@@ -35,7 +34,6 @@ class FoodCategoriesFragment : BaseFragment<FragmentFoodCategoriesBinding>() {
         }
     }
     private fun setupViewMain(data: List<Categories>){
-        Toast.makeText(requireContext(), data.toString(), Toast.LENGTH_SHORT).show()
         binding.componentAllCategoriesHome.gridMenu.adapter = FoodCategoriesAdapter(data)
 
     }

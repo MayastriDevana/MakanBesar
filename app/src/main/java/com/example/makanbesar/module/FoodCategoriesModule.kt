@@ -1,4 +1,4 @@
-package com.example.bcasyariah.com.example.makanbesar.dependecies_injection
+package com.example.bcasyariah.com.example.makanbesar.module
 
 import com.example.bcasyariah.com.example.makanbesar.data.remote.FoodCategoriesRemoteDatasource
 import com.example.bcasyariah.com.example.makanbesar.data.remote.FoodCategoriesRemoteDatasourceImpl
