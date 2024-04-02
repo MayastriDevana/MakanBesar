@@ -1,36 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/chocolate"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/chocolate">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <include
-            android:layout_marginTop="8dp"
-            android:id="@+id/componentFavorite"
-            layout="@layout/component_favorite_meals"
+            android:id="@+id/componentRecommended"
+            layout="@layout/component_recommended"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <include
-            android:id="@+id/componentJapanese"
-            layout="@layout/component_japanese"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-
-            />
-
-
-
     </LinearLayout>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

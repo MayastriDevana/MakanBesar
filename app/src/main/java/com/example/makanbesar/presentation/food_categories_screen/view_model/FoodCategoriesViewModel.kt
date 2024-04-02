@@ -1,4 +1,4 @@
-package com.example.makanbesar.presentation.main_screen.view_model
+package com.example.makanbesar.presentation.food_categories_screen.view_model
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

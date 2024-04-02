@@ -19,7 +19,7 @@ class FoodCategoriesActivity : AppCompatActivity() {
     private val onNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.navigationMain -> {
+                R.id.navigationCategories -> {
                     replaceFragment(FoodCategoriesFragment())
                     return@OnNavigationItemSelectedListener true
                 }

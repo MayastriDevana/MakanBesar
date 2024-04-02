@@ -3,29 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dp">
 
     <TextView
-        android:id="@+id/tvJapanese"
+        android:id="@+id/tvRecommended"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Most popular meal in Japan"
+        android:text="Recommended for you!"
         android:textColor="@color/white"
         android:textSize="20dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvRecommended"
+    app:layout_constraintEnd_toEndOf="parent"
+    >
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvJapanese"
+        android:id="@+id/rvRecommended"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvJapanese"
-        tools:listitem="@layout/item_japanese" />
+        tools:listitem="@layout/item_recommended" />
+</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

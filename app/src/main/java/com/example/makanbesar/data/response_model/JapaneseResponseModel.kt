@@ -3,7 +3,7 @@ package com.example.bcasyariah.com.example.makanbesar.data.response_model
 import com.google.gson.annotations.SerializedName
 
 data class JapaneseResponseModel(
-    @SerializedName("japanese")
+    @SerializedName("meals")
     val japanese: List<Japanese>
 )
 

@@ -7,7 +7,7 @@ import com.example.bcasyariah.com.example.makanbesar.base.BaseFragment
 import com.example.bcasyariah.com.example.makanbesar.data.response_model.Categories
 import com.example.bcasyariah.com.example.makanbesar.presentation.main_screen.adapter.FoodCategoriesAdapter
 import com.example.makanbesar.databinding.FragmentFoodCategoriesBinding
-import com.example.makanbesar.presentation.main_screen.view_model.FoodCategoriesViewModel
+import com.example.makanbesar.presentation.food_categories_screen.view_model.FoodCategoriesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -30,12 +30,11 @@ class FoodCategoriesFragment : BaseFragment<FragmentFoodCategoriesBinding>() {
 
     private fun observeViewModel(){
         viewModel.foodCategories.observe(viewLifecycleOwner){
-            setupViewMain(it.categories)
+            setupViewFoodCategories(it.categories)
         }
     }
-    private fun setupViewMain(data: List<Categories>){
+    private fun setupViewFoodCategories(data: List<Categories>){
         binding.componentAllCategoriesHome.gridMenu.adapter = FoodCategoriesAdapter(data)
-
     }
 
 }

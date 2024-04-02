@@ -7,11 +7,11 @@
 
     <TextView
         android:id="@+id/tvFavorite"
-        android:text="It's most people's all-time favorite menu"
+        android:text="Most people's all-time favorite menu"
         android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/chocolate"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
