@@ -9,7 +9,9 @@ import com.example.makanbesar.databinding.ItemFoodCategoriesBinding
 
 
 class FoodCategoriesAdapter (
-    private val data:List<Categories>
+    private val data:List<Categories>,
+    private val itemClickListener: OnFoodCategoriesClickListener
+
 ): RecyclerView.Adapter<FoodCategoriesAdapter.FoodCategoriesViewHolder> () {
 
 
@@ -41,8 +43,19 @@ class FoodCategoriesAdapter (
     override fun getItemCount(): Int = data.size
 
     override fun onBindViewHolder(holder: FoodCategoriesViewHolder, position: Int) {
-        holder.bind(data[position])
+        val currentItem = data[position]
+        holder.bind(currentItem)
+
+        holder.itemView.setOnClickListener{
+            itemClickListener.onItemClick(currentItem)
+        }
+
 
     }
+    interface OnFoodCategoriesClickListener{
+        fun onItemClick(categories: Categories)
+    }
+
+
 
 }

@@ -32,18 +32,18 @@ class FavoriteMealsFragment : BaseFragment<FragmentFavoriteBinding>() {
         observeViewModel()
     }
 
-    private fun observeViewModel(){
-        viewModel.favoriteMeals.observe(viewLifecycleOwner){
+    private fun observeViewModel() {
+        viewModel.favoriteMeals.observe(viewLifecycleOwner) {
             setupViewFavoriteMeals(it.meals)
         }
 
-        viewModel.japanese.observe(viewLifecycleOwner){
+        viewModel.japanese.observe(viewLifecycleOwner) {
             setupViewJapanese(it.japanese)
         }
 
     }
 
-    private fun setupViewFavoriteMeals(favoritedata: List<Meals>){
+    private fun setupViewFavoriteMeals(favoritedata: List<Meals>) {
         favoriteMealsAdapter = FavoriteMealsAdapter(
             data = favoritedata ?: listOf()
         )
@@ -51,7 +51,8 @@ class FavoriteMealsFragment : BaseFragment<FragmentFavoriteBinding>() {
         binding.componentFavorite.rvFavoriteMeals.adapter = favoriteMealsAdapter
 
     }
-    private fun setupViewJapanese(data: List<Japanese>){
+
+    private fun setupViewJapanese(data: List<Japanese>) {
         japaneseAdapter = JapaneseAdapter(
             data = data ?: listOf()
         )
