@@ -5,8 +5,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.bcasyariah.com.example.makanbesar.base.BaseFragment
 import com.example.bcasyariah.com.example.makanbesar.data.response_model.Categories
-import com.example.bcasyariah.com.example.makanbesar.presentation.beef.view.BeefFragment
-import com.example.bcasyariah.com.example.makanbesar.presentation.beef.view_model.BeefViewModel
 import com.example.bcasyariah.com.example.makanbesar.presentation.main_screen.adapter.FoodCategoriesAdapter
 import com.example.makanbesar.R
 import com.example.makanbesar.databinding.FragmentFoodCategoriesBinding
@@ -29,7 +27,6 @@ class FoodCategoriesFragment : BaseFragment<FragmentFoodCategoriesBinding>() {
     override fun setupView() {
 
         viewModel.getFoodCategories()
-
         observeViewModel()
 
     }
@@ -45,7 +42,7 @@ class FoodCategoriesFragment : BaseFragment<FragmentFoodCategoriesBinding>() {
         val itemClickListener = object : FoodCategoriesAdapter.OnFoodCategoriesClickListener {
             override fun onItemClick(categories: Categories) {
                 parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainer, BeefFragment())
+                    .replace(R.id.fragmentContainer, ListFoodCategoriesBeefFragment())
                     .addToBackStack(null)
                     .commit()
             }
